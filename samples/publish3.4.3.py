@@ -51,8 +51,8 @@ def test_coro():
 @asyncio.coroutine
 def test_coro2():
     try:
-        yield from C.connect('mqtt://172.29.17.3/')
-        # future = yield from C.connect('mqtt://127.0.0.1/')
+        # yield from C.connect('mqtt://172.29.17.3/')
+        future = yield from C.connect('mqtt://127.0.0.1/')
         # future.add_done_callback(disconnected)
         i = 0
         while True:

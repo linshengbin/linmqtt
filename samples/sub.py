@@ -15,8 +15,8 @@ def uptime_coro():
     C = MQTTClient()
     # yield from C.connect('mqtt://test.mosquitto.org/')
     # yield from C.connect('mqtt://broker.emqx.io/') # 34.215.212.114
-    yield from C.connect('mqtt://172.29.17.3/')
-    # future = yield from C.connect('mqtt://127.0.0.1/')
+    # yield from C.connect('mqtt://172.29.17.3/')
+    future = yield from C.connect('mqtt://127.0.0.1/')
     yield from C.subscribe([
         # ('#', QOS_0),
         ('topic_taboo', QOS_1),
